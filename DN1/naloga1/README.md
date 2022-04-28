@@ -1,2 +1,2 @@
-RESITEV za nalogo 1
+RESITEV za nalogo 1 presecisce krivulj
 
