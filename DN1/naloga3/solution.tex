@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[slovene]{babel}
+\usepackage{hyperref}
+\title{Naloga 3}
+\author{Gregor Kikelj}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{listings}
+
+
+\begin{document}
+\section{Naloga 3}
+Imamo izraz $F(x, y)=(x^2+y^2)^3-4x^2y^2$. Dobimo \[F_x=- 8 x y^{2} + 6 x \left(x^{2} + y^{2}\right)^{2}=2 x \left(3 x^{4} + 6 x^{2} y^{2} + 3 y^{4} - 4 y^{2}\right)\]
+in \[F_y=- 8 x^{2} y + 6 y \left(x^{2} + y^{2}\right)^{2}=2 y \left(3 x^{4} + 6 x^{2} y^{2} - 4 x^{2} + 3 y^{4}\right)\]
+
+Precej očitno je da je $(0, 0)$ singularna točka, saj je tudi $F(0, 0)=0$. Dokazali bomo da je to edina singularna točka.
+Precej očitno je tudi da če je $x=0$ je tudi $y=0$ in obratno. Zato se omejimo na primere 
+$x\neq 0$ in $y\neq 0$.
+
+Rešujemo sistem $F_x=0$ in $F_y=0$ kar se s predpostavko $x\neq 0$ in $y\neq 0$ poenostavi v $3 x^{4} + 6 x^{2} y^{2} + 3 y^{4} - 4 y^{2}=0$ in $3 x^{4} + 6 x^{2} y^{2} - 4 x^{2} + 3 y^{4}=0$
+Če od prve enačbe odštejemo drugo dobimo $4x^2-4y^2=0$, torej je $x^2=y^2$. Vstavimo v prvo enačbo in dobimo $3x^4+6x^4+3x^4-4x^2=0$ kar preprosto rešimo da dobimo $x=\pm \sqrt{3}$ in enako $y=\pm \sqrt{3}$. 
+S preprostim preizkusom vidimo da te točke niso na krivulji zato niso singularne točke.
+
+Red točke $(0, 0)$ je očitno $4$ ker je to stopnja najmanjšega monoma. 
+
+Sedaj pridobimo tangente kot rešitve $F=0$ kjer pa vzamemo le monome stopnje $4$. Dobimo $-4x^2y^2=0$ od koder dobimo tangenti $x=0$ in $y=0$. Določimo presečne večkratnosti obeh tangent.
+
+Če v $F$ vstavimo $x=0$ dobimo $-y^6=0$, torej je presečna večkratnost enaka 6. 
+
+Če v $F$ vstavimo $y=0$ dobimo $x^6=0$, torej je presečna večkratnost spet enaka 6. 
+
+
+\end{document}

@@ -1,0 +1,24 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[slovene]{babel}
+\usepackage{hyperref}
+\title{Naloga 1}
+\author{Gregor Kikelj}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\begin{document}
+\section{Naloga 1}
+Naj bo $F=xz^2-yz^2-y^2x$ in $G=z^2+xy$. Vidimo da $[0, 0, 1]$ ni v $F\cap G$ zato računamo rezultanto po $z$ koordinati. 
+Dobimo \[\left[\begin{matrix}x - y & 0 & - x y^{2} & 0\\0 & x - y & 0 & - x y^{2}\\1 & 0 & x y & 0\\0 & 1 & 0 & x y\end{matrix}\right]\] kar se z nekaj spretnosti
+poračuna v $x^4y^2$.
+
+Obdelamo oba primera. 
+Denimo $x=0$. Potem je $F=-yz^2$ in $G=z^2$. Iz $G$ očitno sledi $z=0$, potem je $y$ poljuben. Torej dobimo presečišče $[0, 1, 0]$ reda $4$.
+
+Drugi primer je $y=0$. Potem je $F=xz^2$ in $G=z^2$. Spet iz $G$ sledi $z=0$ iz $F$ pa da je $x$ poljuben. Torej dobimo presečišče $[1, 0, 0]$ reda $2$.
+
+\end{document}

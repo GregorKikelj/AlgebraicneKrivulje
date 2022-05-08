@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[slovene]{babel}
+\usepackage{hyperref}
+\title{Naloga 5}
+\author{Gregor Kikelj}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{breqn}
+
+\begin{document}
+\section{Naloga 5}
+Imamo projektivno krivuljo podano z $F=- y^{4} - z^{4} + 2 \left(x^{2} - 2 x y + y^{2} - y z\right)^{2}$. Izračunamo 
+\[F_x = 2 \cdot \left(4 x - 4 y\right) \left(x^{2} - 2 x y + y^{2} - y z\right)=0\]
+\[F_y = - 4 y^{3} + 2 \left(- 4 x + 4 y - 2 z\right) \left(x^{2} - 2 x y + y^{2} - y z\right)=0\]
+\[F_z = - 4 y \left(x^{2} - 2 x y + y^{2} - y z\right) - 4 z^{3}=0\]
+\bigskip
+
+Enačbe delimo z 8 ali 4 da jih malo poenostavimo
+\[{\left(x - y\right) \left(x^{2} - 2 x y + y^{2} - y z\right)}=0\]
+\[- y^{3} - \left(2 x - 2 y + z\right) \left(x^{2} - 2 x y + y^{2} - y z\right)=0\]
+\[- y \left(x^{2} - 2 x y + y^{2} - y z\right) - z^{3}=0\]
+\bigskip
+
+Iz prve enačbe delimo na 2 primera.
+\bigskip
+
+1.) $x-y=0$.
+Sledi da je $y=x$ kar vstavimo v drugo in tretjo enačbo in poenostavimo da dobimo
+\[- x^{3} + x z^{2}=0\]
+\[x^{2} z - z^{3}=0\]
+Če je $x=0$ potem dobimo $z=0$ kar ni v redu ker smo v projektivnem prostoru. Zato lahko delimo z $x$ da dobimo $-x^2+z^2=0$ oziroma $z^2=x^2$.
+Delimo na 2 primera.
+\bigskip
+
+1.1) $z=x$.
+Vidimo da to ustreza vsem enačbam kar nam da singularno točko $(1, 1, 1)$. 
+\bigskip
+
+1.2) $z=-x$.
+To spet ustreza vsem enačbam in dobimo točko $(1, 1, -1)$.
+\bigskip
+
+2.) $x^{2} - 2 x y + y^{2} - y z=0$.
+Tukaj imamo srečo in izraz prepoznamo v drugi in tretji enačbi ki se poenostavita da dobimo
+\[-y^3=0\]
+\[-z^3=0\]
+
+Hitro vidimo da bo le trojica $(x, y, z)=(0, 0, 0)$ rešila ta sistem, zato ne dobimo singularnih točk v projektivnem.
+
+\subsection{Preverjanje singularnih točk}
+Sedaj za točki $(1, 1, 1)$ in $(1, 1, -1)$ preverimo, če res ležita na $C$. Če ju vstavimo v $F$ res dobimo $0$ tako da moramo le še preveriti rede.
+
+Vidimo da je $F_{xx}(1,1,1)=8 x^{2} - 16 x y + 8 y^{2} - 8 y z + \left(2 x - 2 y\right) \left(8 x - 8 y\right)=-8\ne 0$, zato je točka reda 2.
+
+Vidimo tudi da je $F_{xx}(1,1,-1)=8\ne 0$ po podobnem izračunu zato je ta točka tudi reda 2.
+
+% Sedaj pa še tangente. Naj bo $x=1$ za projekcijo na afin prostor. Delamo s točko $(1,1,1)$ zato naj bo $t=y+1$ in $w=z+1$. Dobimo 
+% $ y^{4} - z^{4} + 2 \left(y^{2} - y z - 2 y + 1\right)^{2}=0$ ampak nas zanimajo le najmanjši monomi. 
+\end{document}

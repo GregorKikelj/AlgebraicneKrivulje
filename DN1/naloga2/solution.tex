@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[slovene]{babel}
+\usepackage{hyperref}
+\title{Naloga 2}
+\author{Gregor Kikelj}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{listings}
+
+
+\begin{document}
+\section{Naloga 2}
+S homogenizacijo dobimo $F=x^3-x^2y-5y^2z-2xyz-xz^2$ in $G=x^2-xy+xz+yz$. Vidimo da $[1, 0, 0]$ ne leži v $F\cap G$ zato računamo rezultanto po $x$ koordinati. 
+Dobimo matriko \[\left[\begin{matrix}1 & - y & - 2 y z - z^{2} & - 5 y^{2} z & 0\\0 & 1 & - y & - 2 y z - z^{2} & - 5 y^{2} z\\1 & - y + z & y z & 0 & 0\\0 & 1 & - y + z & y z & 0\\0 & 0 & 1 & - y + z & y z\end{matrix}\right]\],
+ki nam da rezultanto $45 y^{4} z^{2} - 18 y^{3} z^{3} + 5 y^{2} z^{4}$ 
+
+To se razstavi v
+$45 y^{2} z^{2} \left(y + z \left(- \frac{1}{5} - \frac{4 i}{15}\right)\right) \left(y + z \left(- \frac{1}{5} + \frac{4 i}{15}\right)\right)$.
+
+Delamo po delih.
+
+
+$y=0$ nam da $F=x^3-xz^2$ in $G=x^2+xz$. Dobimo rešitvi $[0, 0, 1]$ in $[1, 0, -1]$. Vsota večkratnosti presečišč je 2, zato imata obe presečišči stopnjo $1$. 
+
+$z=0$ nam da $F=x^3-x^2y=x^2(x-y)$ in $G=x^2-xy=x\cdot (x-y)$. Dobimo rešitvi $[0, 1, 0]$(pri primeru $x=0$) in $[1, 1, 0]$(pri primeru $x-y=0$). Vsota večkratnosti presečišč je 2, zato imata obe presečišči stopnjo $1$.
+
+Če vstavimo $y=z(\frac{1}{5} +\frac{4i}{15} )$ dobimo \[F=x^{3} - x^{2} z \left(\frac{1}{5} + \frac{4 i}{15}\right) - x z^{2} - 2 x z^{2} \cdot \left(\frac{1}{5} + \frac{4 i}{15}\right) - 5 z^{3} \left(\frac{1}{5} + \frac{4 i}{15}\right)^{2}\]
+in \[G=x^{2} + x z - x z \left(\frac{1}{5} + \frac{4 i}{15}\right) + z^{2} \cdot \left(\frac{1}{5} + \frac{4 i}{15}\right)\]
+Presečišče bo tukaj večkratnosti $1$ in samo eno kar vidimo iz rezultante. $F$ in $G$ lahko razstavimo kot
+\[F=\left(x + \frac{i z}{3}\right) \left(x^{2} + x z \left(- \frac{1}{5} - \frac{3 i}{5}\right) + z^{2} \left(- \frac{8}{5} - \frac{7 i}{15}\right)\right)\]
+in
+\[G=\left(x + \frac{i z}{3}\right) \left(x + z \left(\frac{4}{5} - \frac{3 i}{5}\right)\right)\]
+Vidimo da je $x+\frac{iz}{3}$ skupni faktor in dobimo presečišče $[-i/3, 0, 1]$.
+
+Podobno dobimo pri $y=z(\frac{1}{5} -\frac{4i}{15} )$ kjer je potem 
+\[F=\left(x - \frac{i z}{3}\right) \left(x^{2} + x z \left(- \frac{1}{5} + \frac{3 i}{5}\right) + z^{2} \left(- \frac{8}{5} + \frac{7 i}{15}\right)\right)\]
+in
+\[G=\left(x - \frac{i z}{3}\right) \left(x + z \left(\frac{4}{5} + \frac{3 i}{5}\right)\right)\]
+Spet je vsota večkratnosti ena torej le eno presečišče ki je $[-i/3, 0, 1]$.
+
+S tem smo našteli vsa presečišča ki jih je 6 in imajo vsa večkratnost 1.
+\end{document}

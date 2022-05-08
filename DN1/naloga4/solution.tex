@@ -1,0 +1,26 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[slovene]{babel}
+\usepackage{hyperref}
+\title{Naloga 4}
+\author{Gregor Kikelj}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{listings}
+
+
+\begin{document}
+\section{Naloga 4}
+Imamo krivuljo podano z $F=x^{4} - x^{2} y - y^{3}$. Izračunamo $F_y=- x^{2} - 3 y^{2}$. Takoj vidimo da če $(x, y)\neq (0, 0)$ je $F_y<0$, torej $(x, y)$ ni singularna. 
+Precej očitno je tudi da je $(0, 0)$ singularna točka in to reda $3$. 
+
+Tangente torej dobimo iz $0=x^2y+y^3=y(x^2+y^2)$ kar pa je očitno $0$ le za $y=0$. Vstavimo v $F$ in dobimo $x^4$, torej ima tangenta presečno večkratnost $4$. 
+
+Lotimo se parametrizacije. Lahko jo bomo našli ker je red singularne točke za $1$ manjši od reda krivulje ($4-3=1$). Vstavimo $y=tx$ v $F$ da dobimo $F=- t^{3} x^{3} - t x^{3} + x^{4}=x^{3} \left(- t^{3} - t + x\right)$.
+Dobimo $x=t^3+t$ in $y=t^4+t^2$. Za parametrizacijo projektivne krivulje samo homogeniziramo vse koodinate na enako stopnjo $[t, s] \to (t^3s+ts^3, t^4+t^2s^2, s^4)$. 
+
+Če gledamo risbo vidimo da je v $(0, 0)$ res edina negladka točka kot smo izračunali, tangenta pa se tudi ujema. 
+
+\end{document}

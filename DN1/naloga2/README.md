@@ -1,2 +1,4 @@
-RESITEV za nalogo 2
+Rešitev je v solution.pdf
+
+
 
