@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[slovene]{babel}
+\usepackage{hyperref}
+\title{Naloga 2}
+\author{Gregor Kikelj}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{listings}
+
+
+\begin{document}
+\section{Naloga 2}
+\subsection{a}
+1. Naj bo $F = x^3-2yz^2$. Potem je polara na $C$ glede na $[1, 0, 1]$ enaka $\frac{\partial F}{\partial x}+\frac{\partial F}{\partial z}=3x^2-4yz$ kot v navodilu.
+Dokažimo še da se $F$ ne da faktorizirati. Vemo da se homogen polinom razstavi na homogene faktorje zato postavimo 
+$F = (ax^2+bxy+cy^2+dxz+eyz+fz^2)*(gx+hy+iz)$. Torej mora veljati $$0 = (ax^2+bxy+cy^2+dxz+eyz+fz^2)*(gx+hy+iz) - F$$
+oziroma $$0 =(ax^2+bxy+cy^2+dxz+eyz+fz^2)*(gx+hy+iz)-x^3+2yz^2$$ kjer po razstavljanju dobimo $a g x^{3} + a h x^{2} y + a i x^{2} z + b g x^{2} y + b h x y^{2} + b i x y z + c g x y^{2} + c h y^{3} + c i y^{2} z + d g x^{2} z + d h x y z + d i x z^{2} + e g x y z + e h y^{2} z + e i y z^{2} + f g x z^{2} + f h y z^{2} + f i z^{3} - x^{3} + 2 y z^{2}$
+
+Z združevanjem enakih členov dobimo sistem $$\left[\begin{matrix}a g - 1\\a h + b g\\b h + c g\\c h\\a i + d g\\b i + d h + e g\\c i + e h\\d i + f g\\e i + f h + 2\\f i\end{matrix}\right]=0$$
+Iz 4. enacbe dobimo $ch=0$ torej je $c=0$ ali pa $c\ne 0$. Obravnavamo oba primera.
+
+1.) $c=0$.
+Dobimo sistem $$\left[\begin{matrix}a g - 1\\a h + b g\\b h\\0\\a i + d g\\b i + d h + e g\\e h\\d i + f g\\e i + f h + 2\\f i\end{matrix}\right]=0$$
+Delimo na primere glede na to ali je $h\ne 0$ ali pa $h=0$.
+
+1.1)$h\ne 0$. 
+Če $h\ne 0$ potem je iz enacbe 3 $b=0$ in iz enacbe 7 $e=0$. Dobimo sistem $$\left[\begin{matrix}a g - 1\\a h\\0\\0\\a i + d g\\d h\\0\\d i + f g\\f h + 2\\f i\end{matrix}\right]=0$$
+ki pa nima rešitve saj iz 2. enačbe sledi $a=0$ in potem v prvi enacbi dobimo protislovje. 
+
+1.2)$h=0$.
+Dobimo sistem $$\left[\begin{matrix}a g - 1\\b g\\0\\0\\a i + d g\\b i + e g\\0\\d i + f g\\e i + 2\\f i\end{matrix}\right]=0$$
+Iz predzadnje enacbe vidimo da $i\ne 0$ zato iz zadnje enacbe sledi $f=0$ in nato iz 8. enacbe sledi $d=0$, nato pa iz 5. enacbe sledi $a=0$
+kar je v protislovju s prvo enacbo.
+
+2.) Vemo da $c\ne 0$. Potem iz 4. enacbe dobimo $h=0$. Dobimo sistem $$\left[\begin{matrix}a g - 1\\b g\\c g\\0\\a i + d g\\b i + e g\\c i\\d i + f g\\e i + 2\\f i\end{matrix}\right]=0$$
+Iz predzadnje enacbe dobimo $i\ne 0$ zato iz zadnje enacbe sledi $f=0$ in nato iz 8. enacbe sledi $d=0$, nato pa iz 5. enacbe sledi $a=0$ Dobimo enako protislovje kot prej, torej v prvi enačbi.
+
+Ker se sistema enačb ne da rešiti, vemo da je polinom nerazcepen.
+
+
+
+\subsection{b}
+2. Naj bo $F = x^3/2-yz^2$ Po podobnem računu dobimo polaro $3x^2-2yz$ kar je spet ravno to kar hočemo. Da je polinom nerazcepen preverimo
+podobno kot pri prejšnji nalogi ampak se mi res ne da spet vsega prepisovat v latex.
+
+
+
+
+
+
+
+\subsection{c}
+3. Vzemimo krivuljo $x^2+y^2+z^2$. 
+\end{document}
